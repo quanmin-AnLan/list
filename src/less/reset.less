@@ -1,0 +1,130 @@
+// 重置原生样式
+html,
+body {
+  scroll-behavior: smooth;
+  font: 400 1em/1.8 'Microsoft Yahei', 'PingFang SC', 'Avenir', 'Segoe UI', 'Hiragino Sans GB', STHeiti, 'Microsoft Sans Serif', 'WenQuanYi Micro Hei', sans-serif;
+  text-align: center;
+  background-color: @white;
+}
+
+a {
+  color: @base;
+  text-decoration: none;
+  &:hover {
+    color: @blue;
+  }
+}
+
+li {
+  list-style: none;
+}
+
+a,
+body,
+div,
+footer,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+html,
+i,
+iframe,
+img,
+label,
+nav,
+object,
+ol,
+p,
+pre,
+section,
+span,
+ul,
+video {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
+
+// el-table
+.el-table {
+  &::before {
+    display: none;  //去除一条原生的诡异的线
+  }
+  .el-table__header-wrapper {
+    .el-table__header {
+      border-bottom: 1px solid @lightWhite;
+      .is-leaf {
+        background-color: @gray;  //表头颜色
+        color: @white;
+      }
+      th {
+        border: none;       //表头边框
+      }
+    }
+  }
+  .el-table__body-wrapper {
+    .el-table__body {
+      tr {
+        td {
+          border: none;     //表体边框
+        }
+      }
+      .hover-row {
+        span.underline {
+          color: @blue;
+        }
+      }
+    }
+  }
+  // 排序按钮
+  .ascending {
+    border-bottom-color: @white;
+    .sort-caret.ascending{
+      border-bottom-color: @white;
+    }
+  }
+  .descending {
+    border-top-color: @white;
+    .sort-caret.descending{
+      border-top-color: @white;
+    }
+  }
+}
+.el-table__fixed, .el-table__fixed-right {
+  &::before {
+    display: none;  //去除一条原生的诡异的线
+  }
+  .el-table__fixed-header-wrapper {
+    .el-table__header {
+      .is-leaf {
+        background-color: @gray;  //表头颜色
+        color: @white;
+      }
+      th {
+        border: none;       //表头边框
+      }
+    }
+  }
+  .el-table__fixed-body-wrapper {
+    .el-table__body {
+      tr {
+        td {
+          border: none;     //表体边框
+        }
+      }
+    }
+  }
+}
+
+.el-message {
+  z-index: 100000 !important;
+}
+
+.el-menu-item {
+  .text-overflow;
+}
