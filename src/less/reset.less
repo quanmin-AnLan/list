@@ -4,14 +4,14 @@ body {
   scroll-behavior: smooth;
   font: 400 1em/1.8 'Microsoft Yahei', 'PingFang SC', 'Avenir', 'Segoe UI', 'Hiragino Sans GB', STHeiti, 'Microsoft Sans Serif', 'WenQuanYi Micro Hei', sans-serif;
   text-align: center;
-  background-color: @white;
+  background: linear-gradient(to right, rgb(40, 60, 134), rgb(69, 162, 71));
 }
 
 a {
   color: @base;
   text-decoration: none;
   &:hover {
-    color: @blue;
+    color: #f00;
   }
 }
 
@@ -57,10 +57,12 @@ video {
   }
   .el-table__header-wrapper {
     .el-table__header {
-      border-bottom: 1px solid @lightWhite;
+      tr {
+        background: linear-gradient(to right, rgb(15, 12, 41), rgb(48, 43, 99), rgb(36, 36, 62));  //表头颜色
+      }
       .is-leaf {
-        background-color: @gray;  //表头颜色
-        color: @white;
+        background-color: transparent;
+        color: lightblue;
       }
       th {
         border: none;       //表头边框
@@ -70,7 +72,9 @@ video {
   .el-table__body-wrapper {
     .el-table__body {
       tr {
+        background: linear-gradient(to right, rgb(0, 242, 96), rgb(5, 117, 230)) !important;
         td {
+          background: transparent !important;
           border: none;     //表体边框
         }
       }
@@ -92,31 +96,6 @@ video {
     border-top-color: @white;
     .sort-caret.descending{
       border-top-color: @white;
-    }
-  }
-}
-.el-table__fixed, .el-table__fixed-right {
-  &::before {
-    display: none;  //去除一条原生的诡异的线
-  }
-  .el-table__fixed-header-wrapper {
-    .el-table__header {
-      .is-leaf {
-        background-color: @gray;  //表头颜色
-        color: @white;
-      }
-      th {
-        border: none;       //表头边框
-      }
-    }
-  }
-  .el-table__fixed-body-wrapper {
-    .el-table__body {
-      tr {
-        td {
-          border: none;     //表体边框
-        }
-      }
     }
   }
 }
